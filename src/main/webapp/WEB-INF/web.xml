@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <!--<servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>uz.pdp.g34initparamslistenersfilter.servlet.HomeServlet</servlet-class>
+        <init-param>
+            <param-name>companyName</param-name>
+            <param-value>PDP</param-value>
+        </init-param>
+        <init-param>
+            <param-name>foundationYear</param-name>
+            <param-value>2017</param-value>
+        </init-param>
+        <init-param>
+            <param-name>founder</param-name>
+            <param-value>Odil Mirzayev</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>-->
+    <listener>
+        <listener-class>uz.pdp.g34initparamslistenersfilter.listeners.ApplicationSessionListener</listener-class>
+    </listener>
+    <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>uz.pdp.g34initparamslistenersfilter.filter.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecurityFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
