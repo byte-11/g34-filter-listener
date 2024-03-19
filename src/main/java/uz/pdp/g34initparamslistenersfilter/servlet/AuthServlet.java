@@ -28,8 +28,8 @@ public class AuthServlet extends HttpServlet {
         Cookie cookie = new Cookie("username", username);
         cookie.setHttpOnly(true);
         cookie.setMaxAge(30);
-        resp.addCookie(cookie);
-
+        cookie.setPath("/");
+            
         resp.addCookie(cookie);
         resp.sendRedirect("/");
     }
